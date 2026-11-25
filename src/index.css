@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@import "maplibre-gl/dist/maplibre-gl.css";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-civic-bg: #07111F;
+  --color-civic-surface: #0B1929;
+  --color-civic-card: #102338;
+  --color-civic-elevated: #142B40;
+  --color-civic-emerald: #19C98A;
+  --color-civic-mint: #48E6B0;
+  --color-civic-cyan: #36C5D9;
+  --color-civic-text: #F4F8FC;
+  --color-civic-muted: #9AABBB;
+  --color-civic-border: #20364A;
+}
+
+@layer base {
+  html {
+    background-color: #07111F;
+    color: #F4F8FC;
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* MapLibre dark theme popup & control overrides */
+.maplibregl-popup-content {
+  background: #102338 !important;
+  color: #F4F8FC !important;
+  border: 1px solid #20364A !important;
+  border-radius: 12px !important;
+  padding: 0 !important;
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.7) !important;
+}
+
+.maplibregl-popup-tip {
+  border-top-color: #102338 !important;
+  border-bottom-color: #102338 !important;
+}
+
+.maplibregl-popup-close-button {
+  color: #9AABBB !important;
+  font-size: 18px !important;
+  padding: 6px 10px !important;
+}
+
+.maplibregl-popup-close-button:hover {
+  color: #F4F8FC !important;
+  background: transparent !important;
+}
+
+.maplibregl-ctrl-group {
+  background: #102338 !important;
+  border: 1px solid #20364A !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+.maplibregl-ctrl-group button + button {
+  border-top: 1px solid #20364A !important;
+}
+
+.maplibregl-ctrl-icon {
+  filter: invert(0.92);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07111F;
+}
+::-webkit-scrollbar-thumb {
+  background: #20364A;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2e4c66;
+}

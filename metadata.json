@@ -1,0 +1,6 @@
+{
+  "name": "CivicLens",
+  "description": "See Your City. Understand Your Community. AI-powered Civic Intelligence and Community Awareness Platform for every Indian citizen.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
